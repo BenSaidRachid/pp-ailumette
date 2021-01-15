@@ -7,6 +7,9 @@ import gameLogic from "./gameLogic";
 import checkCommand from "./checkCommand";
 import checkWinner from "./checkWinner";
 import removeMatches from "./removeMatches";
+import randomAIChoice from "./randomAIChoice";
+import cleanLine from "./cleanLine";
+import sleep from "./sleep";
 import * as messages from "./messages";
 
 export {
@@ -18,6 +21,9 @@ export {
     gameLogic,
     messages,
     removeMatches,
+    randomAIChoice,
+    cleanLine,
     checkCommand,
     checkWinner,
+    sleep,
 };

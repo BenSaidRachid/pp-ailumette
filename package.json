@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "yarn nodemon",
+    "dev": "babel-node --extensions '.ts' src",
     "lint": "yarn eslint --ext .ts ./src/**/*.ts",
     "fix_lint": "yarn eslint --fix --ext .ts ./src/**/*.ts",
     "clean": "yarn rimraf .dist",

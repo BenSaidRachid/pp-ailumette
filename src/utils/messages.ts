@@ -5,7 +5,7 @@ const winnerMessage = (winner: number): string => {
     return "I lost.. snif.. but I’ll get you next time!!";
 };
 
-const infoMessage = (data: { playerTurn: boolean; nbMatches: number; nbLines: number }): string => {
+const infoMessage = (data: GameParamaters): string => {
     return strings.matchesRemoved(data);
 };
 

@@ -7,10 +7,10 @@ const formatString = (nbMatches: number, maxMatches: number): string => {
     return spacing + matches + spacing;
 };
 
-const generateGame = (nbLines: number): string[] => {
-    const matches = [...new Array(nbLines)].map(() => "");
+const generateGame = (lineNum: number): string[] => {
+    const matches = [...new Array(lineNum)].map(() => "");
     let nbMatches = 1;
-    const maxMatches = maxNbMatches(nbLines);
+    const maxMatches = maxNbMatches(lineNum);
     for (let i = 0; i < matches.length; i++) {
         matches[i] = formatString(nbMatches, maxMatches);
         nbMatches += 2;

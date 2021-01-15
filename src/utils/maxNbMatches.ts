@@ -1,6 +1,6 @@
-const maxNbMatches = (nbLines: number): number => {
+const maxNbMatches = (lineNum: number): number => {
     let nbMatches = 1;
-    for (let i = 0; i < nbLines - 1; i++) {
+    for (let i = 0; i < lineNum - 1; i++) {
         nbMatches += 2;
     }
 

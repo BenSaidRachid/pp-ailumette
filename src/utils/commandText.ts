@@ -3,15 +3,11 @@ type Command = {
     question: number;
 };
 
-const commandText = (playerTurn: boolean, question: number): Command => {
-    if (playerTurn) {
-        if (question == 0) {
-            return { command: "Your turn:\nLine:", question: question + 1 };
-        } else {
-            return { command: "Matches:", question: 0 };
-        }
+const commandText = (question: number): Command => {
+    if (question == 0) {
+        return { command: "Your turn: \nLine: ", question: question + 1 };
     }
-    return { command: "AI’s turn...", question: 0 };
+    return { command: "Matches: ", question: 0 };
 };
 
 export default commandText;

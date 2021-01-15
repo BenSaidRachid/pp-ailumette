@@ -1,10 +1,12 @@
-const checkLineRange = ({ matches = [], nbLines = "" }: GameParamaters): void => {
-    if (matches.length < parseInt(nbLines) || parseInt(nbLines) == 0)
+import { cleanLine } from ".";
+
+const checkLineRange = ({ matches = [], lineNum = "" }: GameParamaters): void => {
+    if (matches.length < parseInt(lineNum) || parseInt(lineNum) == 0)
         throw new Error("this line is out of range");
 };
 
-const checkLineInput = ({ nbLines = "" }: GameParamaters): void => {
-    if (parseInt(nbLines) < 0 || isNaN(parseInt(nbLines)))
+const checkLineInput = ({ lineNum = "" }: GameParamaters): void => {
+    if (parseInt(lineNum) < 0 || isNaN(parseInt(lineNum)))
         throw new Error("invalid input (positive number expected)");
 };
 
@@ -14,8 +16,8 @@ const checkMatchInput = ({ nbMatches = "" }: GameParamaters): void => {
     else if (isNaN(parseInt(nbMatches))) throw new Error("you have to remove at least one match");
 };
 
-const checkMatchInLine = ({ matches = [], nbLines = "", nbMatches = "" }: GameParamaters): void => {
-    if (matches[parseInt(nbLines) - 1].trim().length < parseInt(nbMatches))
+const checkMatchInLine = ({ matches = [], lineNum = "", nbMatches = "" }: GameParamaters): void => {
+    if (cleanLine(matches[parseInt(lineNum) - 1]).length < parseInt(nbMatches))
         throw new Error("not enough matches on this line");
 };
 

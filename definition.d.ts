@@ -5,5 +5,5 @@ type GameParamaters = {
     answer?: string;
     winner?: number;
     nbMatches?: string;
-    nbLines?: string;
+    lineNum?: string;
 };
